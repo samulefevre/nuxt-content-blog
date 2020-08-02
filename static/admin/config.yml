@@ -19,6 +19,11 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Author name", name: "author.name", widget: "string" }
-      - { label: "Author bio", name: "author.bio", widget: "string" }
-      - { label: "Author img", name: "author.img", widget: "string" }
+      - label: "Author"
+        name: "author"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Bio", name: "bio", widget: "string" }
+          - { label: "Image", name: "img", widget: "image" }
